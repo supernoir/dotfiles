@@ -1,0 +1,19 @@
+[push]
+	default = simple
+[alias]
+	fa = fetch --all --verbose --prune
+	dc = diff --cached
+	unstage = reset HEAD
+	uncommit = reset --soft HEAD^
+	amend = commit --amend
+	lsb = branch -avv
+	slog = log --pretty=format:'%Creset%C(red bold)[%ad] %C(blue bold)%h %Creset%C(magenta bold)%d %Creset%s %C(green bold)(%an)%Creset' --abbrev-commit --date=short --graph --all
+	latest = log --pretty=format:'%Creset%C(red bold)[%ad] %C(blue bold)%h %Creset%C(magenta bold)%d %Creset%s %C(green bold)(%an)%Creset' --abbrev-commit --date=short --graph --all --since=1.day.ago
+	subway = log --graph --color --pretty=format:"%C(220)%h%x09%C(107)%d%C(252)%x20%s"
+	metro = log --graph --all --color --pretty=format:"%C(220)%h%x09%C(107)%d%C(252)%x20%s"
+	pdiff = diff --patience -C -M
+	pmerge = merge -s recursive -X patience
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	whois = !sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -u
+[core]
+	editor = /usr/bin/vim
