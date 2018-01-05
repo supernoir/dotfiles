@@ -1,6 +1,8 @@
 # My Dotfiles
 
 ### Currently tracking
-- ZSH
-- VIM
-- Oh My Zsh
+- zsh
+- bash
+- tmux
+- vim
+- eslint / stylelint
